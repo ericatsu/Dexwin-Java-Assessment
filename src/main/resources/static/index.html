@@ -174,11 +174,6 @@
         <div class="result" id="result"></div>
     </div>
 
-    <div class="supported-currencies">
-        <p>Supported currencies: USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY and many more based on the Exchange Rate API.
-        </p>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sourceCurrency = document.getElementById('sourceCurrency');
@@ -222,7 +217,6 @@
                     })
                     .then(data => {
                         console.log('Success data:', data);
-                        // Rest of your code
                     })
                     .catch(err => {
                         console.error('Fetch error:', err);
@@ -236,7 +230,6 @@
                 targetCurrency.value = temp;
             });
 
-            // Helper to display errors
             function displayError(message) {
                 error.textContent = message;
                 error.style.display = 'block';
